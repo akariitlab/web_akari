@@ -23,6 +23,34 @@
 </head>
 
 <body>
+        <!-- Botón flotante de WhatsApp -->
+        <div class="whatsapp-chat-widget">
+                <!-- El botón que siempre está visible -->
+                <button class="whatsapp-button" onclick="toggleWhatsAppPopup()">
+                        <svg viewBox="0 0 32 32" class="whatsapp-icon">
+                                <path
+                                        d="M16 4C9.37 4 4 9.37 4 16c0 2.89 1 5.57 2.7 7.7L5 26l4.63-1.4A11.95 11.95 0 0016 28c6.63 0 12-5.37 12-12S22.63 4 16 4zm6.75 18.35c-.4 1.15-1.55 2.05-2.8 2.35-1 .25-4 .5-6.95-2-1.65-1.45-3-3.15-3-5.3 0-2.85 2.1-4.8 4.65-4.8 1.25 0 2.35.5 3.1 1.35l.75.8 1.15-.35c.45-.15 1.55-.55 1.85-1.4l.2-.55v-.7c0-.75-.05-.9-2.1-1.95z">
+                                </path>
+                        </svg>
+                </button>
+
+                <!-- La ventana pop-up (oculta por defecto) -->
+                <div id="whatsapp-popup" class="whatsapp-popup">
+                        <div class="popup-header">
+                                <span>¿Tienes alguna duda? 👋</span>
+                                <button class="close-button" onclick="toggleWhatsAppPopup()">×</button>
+                        </div>
+                        <div class="popup-body">
+                                <p>¡Hola! Escríbenos y te atenderemos al instante.</p>
+                        </div>
+                        <div class="popup-footer">
+                                <a href="https://wa.me/57304213166" class="chat-cta-button" target="_blank">
+                                        Iniciar chat
+                                </a>
+                        </div>
+                </div>
+        </div>
+
 
         <!-- Header -->
         <header class="header">

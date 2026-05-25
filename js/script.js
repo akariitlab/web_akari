@@ -55,3 +55,14 @@ sr.reveal(`.section-title, .section-subtitle, .section-description, .brand-image
 
 sr.reveal(`.about-imageContent, .menu-items`, {origin: 'left'});
 sr.reveal(`.about-details, .time-table`, {origin: 'right'});
+
+// WhatsApp
+
+function toggleWhatsAppPopup() {
+    var popup = document.getElementById("whatsapp-popup");
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+}
