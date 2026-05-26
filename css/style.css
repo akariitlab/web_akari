@@ -247,7 +247,12 @@ img {
 .media-icons a {
   color: var(--text-color-light);
 }
-
+.bxl-instagram-alt:hover, .bxl-linkedin:hover{
+  color: var(--primary-color);
+}
+.bxl-linkedin, .bxl-instagram-alt{
+  font-size: 26px;
+}
 .navClose-btn,
 .navOpen-btn,
 .media-icons {
