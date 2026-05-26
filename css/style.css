@@ -249,6 +249,7 @@ img {
 }
 .bxl-instagram-alt:hover, .bxl-linkedin:hover{
   color: var(--primary-color);
+  transition: var(--tran-0-5);
 }
 .bxl-linkedin, .bxl-instagram-alt{
   font-size: 26px;
