@@ -68,10 +68,12 @@ window.addEventListener("scroll", () => {
             navId.classList.remove("active-navlink")
         }
 
+        navId.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            body.style.overflowY = "scroll";
+        })
     })
 
-console.log(sections)
- 
   
 // Scroll Reveal Animation
 const sr = ScrollReveal({
@@ -81,7 +83,7 @@ const sr = ScrollReveal({
     delay: 400
 })
 
-sr.reveal(`.section-title, .section-subtitle, .section-description, .brand-image, .testimonial, .newsletter .logo-content, .newsletter-inputBox, .newsletter-mediaIcon, .footer-content, .footer-links`, {interval: 100,});
+sr.reveal(`.section-tite, .section-subtitle, .section-description, .brand-images, .testimonial, .newsletter .logo-content, .newsletter-inputBox, .newsletter-mediaIcon, .footer-content, .footer-links`, {interval: 100,});
 
 sr.reveal(`.about-imageContent, .menu-items`, {origin: 'left'});
 sr.reveal(`.about-details, .time-table`, {origin: 'right'});

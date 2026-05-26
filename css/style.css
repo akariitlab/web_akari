@@ -197,8 +197,11 @@ img {
 .header-active .logo-text,
 .header-active .nav-link,
 .header-active .phone-icon,
-.header-active .phone-number {
+.header-active .phone-number{
   color: var(--text-color);
+}
+.header-active .icon-school{
+  fill: var(--text-color);
 }
 
 .logo-icon,
