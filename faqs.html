@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Akari - Preguntas frecuentes</title>
+
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+        <!-- Boxicons -->
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+        <!-- Botón flotante de WhatsApp -->
+        <div class="whatsapp-chat-widget">
+                <!-- El botón que siempre está visible -->
+                <button class="whatsapp-button" onclick="toggleWhatsAppPopup()">
+                        <svg class="whatsapp-icon" width="800px" height="800px" viewBox="-2.73 0 1225.016 1225.016"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path fill="#E0E0E0"
+                                        d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z" />
+                                <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="609.77" y1="1190.114"
+                                        x2="609.77" y2="21.084">
+                                        <stop offset="0" stop-color="#20b038" />
+                                        <stop offset="1" stop-color="#60d66a" />
+                                </linearGradient>
+                                <path fill="url(#a)"
+                                        d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z" />
+                                <image overflow="visible" opacity=".08" width="682" height="639"
+                                        xlink:href="FCC0802E2AF8A915.png" transform="translate(270.984 291.372)" />
+                                <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF"
+                                        d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z" />
+                                <path fill="#FFF"
+                                        d="M1036.898 176.091C923.562 62.677 772.859.185 612.297.114 281.43.114 12.172 269.286 12.039 600.137 12 705.896 39.633 809.13 92.156 900.13L7 1211.067l318.203-83.438c87.672 47.812 186.383 73.008 286.836 73.047h.255.003c330.812 0 600.109-269.219 600.25-600.055.055-160.343-62.328-311.108-175.649-424.53zm-424.601 923.242h-.195c-89.539-.047-177.344-24.086-253.93-69.531l-18.227-10.805-188.828 49.508 50.414-184.039-11.875-18.867c-49.945-79.414-76.312-171.188-76.273-265.422.109-274.992 223.906-498.711 499.102-498.711 133.266.055 258.516 52 352.719 146.266 94.195 94.266 146.031 219.578 145.992 352.852-.118 274.999-223.923 498.749-498.899 498.749z" />
+                        </svg>
+                </button>
+
+                <!-- La ventana pop-up (oculta por defecto) -->
+                <div id="whatsapp-popup" class="whatsapp-popup">
+                        <div class="popup-header">
+                                <span>¿Tienes alguna duda? 👋</span>
+                                <button class="close-button" onclick="toggleWhatsAppPopup()">×</button>
+                        </div>
+                        <div class="popup-body">
+                                <p>¡Hola! Escríbenos y te atenderemos al instante.</p>
+                        </div>
+                        <div class="popup-footer">
+                                <a href="https://wa.me/51963139952?text=Hola,%20vengo%20de%20la%20secci%C3%B3n%20de%20preguntas%20frecuentes%20de%20AKARI%20y%20tengo%20una%20duda"
+                                        class="chat-cta-button" target="_blank">
+                                        Iniciar chat
+                                </a>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header header-active header-always-active" id="header">
+                <nav class="nav container flex">
+
+                        <a href="index.html" class="logo-content flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
+                                        viewBox="0 0 24 24" class="icon-school">
+                                        <path
+                                                d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z">
+                                        </path>
+                                </svg>
+                                <span class="logo-text">Akari.</span>
+                        </a>
+
+                        <div class="menu-content">
+
+                                <ul class="menu-list flex">
+                                        <li><a href="index.html#home" class="nav-link">Inicio</a></li>
+                                        <li><a href="index.html#about" class="nav-link">Experiencia</a></li>
+                                        <li><a href="index.html#menu" class="nav-link">Cursos</a></li>
+                                        <li><a href="index.html#review" class="nav-link">Equipo</a></li>
+                                </ul>
+
+                                <div class="media-icons flex">
+                                        <a href=" https://www.instagram.com/aprende.akari/?hl=es" target="_blank"><i
+                                                        class="bx bxl-instagram-alt"></i></a>
+                                        <a href="https://www.linkedin.com/company/akari-tech-education"
+                                                target="_blank"><i class="bx bxl-linkedin"></i></a>
+                                </div>
+
+                                <i class="bx bx-x navClose-btn"></i>
+                        </div>
+
+                        <div class="contact-content flex">
+                                <i class="bx bx-phone phone-icon"></i>
+                                <span class="phone-number">+51 963 139 952</span>
+                        </div>
+
+                        <i class="bx bx-menu navOpen-btn"></i>
+
+                </nav>
+        </header>
+
+        <!-- Main -->
+        <main>
+                <!-- Hero FAQ -->
+                <section class="section faq-hero">
+                        <div class="container">
+                                <h1 class="section-title">Preguntas frecuentes</h1>
+                                <p class="section-description">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                        </div>
+                </section>
+
+                <!-- Grid FAQ -->
+                <section class="section container faq-grid">
+                        <!-- FAQ 1 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿Qué es Akari?</h3>
+                                <p class="faq-card__answer">Akari es una iniciativa educativa que impulsa la formación
+                                        en STEM para estudiantes de 1.° a 5.° de secundaria, mediante una metodología
+                                        práctica basada en proyectos.</p>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿A quién está dirigido Akari?</h3>
+                                <p class="faq-card__answer">Está dirigido a estudiantes de 1.° a 5.° de secundaria que
+                                        quieran aprender sobre ciencia, tecnología, ingeniería, matemáticas,
+                                        programación e innovación.</p>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿Qué significa STEM?</h3>
+                                <p class="faq-card__answer">STEM hace referencia a Ciencia, Tecnología, Ingeniería y
+                                        Matemáticas. En Akari estas áreas se trabajan de forma integrada para que los
+                                        estudiantes puedan aplicar lo aprendido en proyectos reales.</p>
+                        </div>
+                        <!-- FAQ 4 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿Cómo es la metodología de enseñanza?</h3>
+                                <p class="faq-card__answer">Akari utiliza un enfoque basado en proyectos, donde los
+                                        estudiantes aprenden creando, experimentando y transformando ideas en soluciones
+                                        concretas.</p>
+                        </div>
+                        <!-- FAQ 5 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿Necesito conocimientos previos para participar?</h3>
+                                <p class="faq-card__answer">No necesariamente. Los cursos están pensados para acompañar
+                                        a los estudiantes según su nivel, permitiendo que aprendan de forma progresiva y
+                                        práctica.</p>
+                        </div>
+                        <!-- FAQ 6 -->
+                        <div class="faq-card">
+                                <span class="faq-card__icon">&lt; &gt;</span>
+                                <h3 class="faq-card__question">¿Qué habilidades desarrolla un estudiante en Akari?</h3>
+                                <p class="faq-card__answer">Los estudiantes desarrollan pensamiento crítico,
+                                        creatividad, criterio tecnológico, resolución de problemas, trabajo en equipo y
+                                        capacidad para materializar ideas.</p>
+                        </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="section faq-cta">
+                        <div class="container">
+                                <h2 class="section-title">¿Tienes otra pregunta?</h2>
+                                <p class="section-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                                <a href="https://wa.me/51963139952?text=Hola,%20vengo%20de%20la%20secci%C3%B3n%20de%20preguntas%20frecuentes%20de%20AKARI%20y%20tengo%20una%20duda"
+                                        target="_blank" class="faq-cta-btn">Contáctanos</a>
+                        </div>
+                </section>
+
+                <!-- Footer -->
+                <footer class="section footer">
+                        <div class="footer-container container">
+                                <div class="footer-content">
+                                        <a href="index.html" class="logo-content flex">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="#ffffff" viewBox="0 0 24 24">
+                                                        <path
+                                                                d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z">
+                                                        </path>
+                                                </svg>
+                                                <span class="logo-text">Akari.</span>
+                                        </a>
+                                        <p class="content-description">
+                                                Somos una organización enfocada en la educación de la tecnología en
+                                                jovenes ubicados
+                                                en Perú. Nuestro misión es transformar la educación, infundir
+                                                pensamientos solidos y criticos
+                                                para formar a los jovenes del futuro.
+                                        </p>
+                                        <div class="footer-location flex">
+                                                <i class="bx bx-map map-icon"></i>
+                                                <div class="location-text">
+                                                        Perú, Lima
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="footer-linkContent">
+                                        <ul class="footer-links">
+                                                <h4 class="footerLinks-title">Soporte</h4>
+                                                <li><a href="#" class="footer-link">Sobre nosotros</a></li>
+                                                <li><a href="#" class="footer-link">FAQs</a></li>
+                                                <li><a href="#" class="footer-link">Politica de privacidad</a></li>
+                                                <li><a href="#" class="footer-link">Trabaja con nosotros</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+
+                        <div class="footer-copyRight">
+                                &#169; Akari. All rights reserved
+                        </div>
+                </footer>
+
+                <!-- Scroll -->
+                <a href="#header" class="scrollUp-btn flex">
+                        <i class="bx bx-up-arrow-alt scrollUp-icon"></i>
+                </a>
+
+        </main>
+
+        <!-- Swiper JS -->
+        <script src="js/swiper-bundle.min.js"></script>
+
+
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+
+</body>
+
+</html>
