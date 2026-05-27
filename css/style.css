@@ -1214,7 +1214,7 @@ img {
 
 .team-header .section-description {
   font-size: 1.3rem;
-  color: #e05c2a;
+  color: #1B2540;
   text-align: left;
   padding: 0;
   line-height: 1.5;
@@ -1282,8 +1282,9 @@ img {
   display: block;
   font-size: 1.3rem;
   font-weight: 400;
-  color: #e05c2a;
+  color: #1B2540;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .team-card .bio {
