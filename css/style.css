@@ -197,10 +197,11 @@ img {
 .header-active .logo-text,
 .header-active .nav-link,
 .header-active .phone-icon,
-.header-active .phone-number{
+.header-active .phone-number {
   color: var(--text-color);
 }
-.header-active .icon-school{
+
+.header-active .icon-school {
   fill: var(--text-color);
 }
 
@@ -247,13 +248,18 @@ img {
 .media-icons a {
   color: var(--text-color-light);
 }
-.bxl-instagram-alt:hover, .bxl-linkedin:hover{
+
+.bxl-instagram-alt:hover,
+.bxl-linkedin:hover {
   color: var(--primary-color);
   transition: var(--tran-0-5);
 }
-.bxl-linkedin, .bxl-instagram-alt{
+
+.bxl-linkedin,
+.bxl-instagram-alt {
   font-size: 26px;
 }
+
 .navClose-btn,
 .navOpen-btn,
 .media-icons {
@@ -307,6 +313,7 @@ img {
   .nav-link::before {
     background-color: var(--text-color);
   }
+
   .navClose-btn {
     position: absolute;
     top: 2rem;
@@ -314,12 +321,14 @@ img {
     font-size: 2.5rem;
     cursor: pointer;
   }
+
   .navOpen-btn {
     font-size: 2rem;
     cursor: pointer;
     color: var(--white-color);
   }
-  .header-active .navOpen-btn{
+
+  .header-active .navOpen-btn {
     color: var(--text-color);
   }
 }
@@ -1076,12 +1085,14 @@ img {
   text-align: center;
   background-color: var(--white-color);
 }
+
 .faq-hero .section-title {
   font-size: var(--big-font);
   color: var(--text-color);
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .faq-hero .section-description {
   color: var(--text-color-light);
   max-width: 600px;
@@ -1142,6 +1153,7 @@ img {
   color: var(--text-color);
   font-weight: 700;
 }
+
 .faq-cta .section-description {
   color: var(--text-color-light);
   padding: 0;
@@ -1159,6 +1171,7 @@ img {
   transition: var(--tran-0-3);
   display: inline-block;
 }
+
 .faq-cta-btn:hover {
   background-color: var(--text-color);
   color: var(--white-color);
@@ -1169,8 +1182,225 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 600px) {
   .faq-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ===== TEAM SECTION ===== */
+.team-section {
+  background-color: var(--white-color);
+  padding: 6rem 0 3rem;
+}
+
+.team-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-header {
+  margin-bottom: 4rem;
+}
+
+.team-header .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+
+.team-header .section-description {
+  font-size: 1.3rem;
+  color: #e05c2a;
+  text-align: left;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.mySwiperTeam {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 0 !important;
+  /* override del padding automático de Swiper */
+}
+
+/* Swiper añade padding-bottom al wrapper cuando hay paginación interna; lo anulamos */
+.mySwiperTeam .swiper-wrapper {
+  padding-bottom: 0 !important;
+}
+
+.mySwiperTeam .swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: transparent;
+  padding-right: 2rem;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.team-img-placeholder {
+  width: 72px;
+  height: 72px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  color: #bbb;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.team-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-card .name {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.2rem;
+  line-height: 1.2;
+}
+
+.team-card .job {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #e05c2a;
+  margin-bottom: 1rem;
+}
+
+.team-card .bio {
+  font-size: 1.25rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+}
+
+.team-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.team-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.6rem;
+  transition: color 0.3s;
+}
+
+.team-social a:hover {
+  color: #e05c2a;
+}
+
+.swiper-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+}
+
+.swiper-pagination-team {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: auto;
+}
+
+.swiper-pagination-team .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  background-color: #ccc;
+  opacity: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.swiper-pagination-team .swiper-pagination-bullet-active {
+  background-color: #555;
+}
+
+.team-navBtns {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.team-swiper-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1.5px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  color: #555;
+  font-size: 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+  user-select: none;
+}
+
+.team-swiper-button:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.careers-section {
+  margin-top: 5.5rem;
+  padding-top: 4rem;
+  border-top: 1px solid #e8e8e8;
+  text-align: left;
+}
+
+.careers-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.6rem;
+}
+
+.careers-description {
+  font-size: 1.3rem;
+  color: #e05c2a;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.careers-btn {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border: 1.5px solid #333;
+  color: #333;
+  background: transparent;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.careers-btn:hover {
+  background-color: #333;
+  color: #fff;
 }
