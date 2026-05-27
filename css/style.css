@@ -307,7 +307,7 @@ img {
   }
 
   .nav-link {
-    color: var(--white-color);
+    color: var(--primary-color);
   }
 
   .nav-link::before {
