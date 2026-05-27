@@ -16,6 +16,34 @@ if (document.querySelector(".mySwiper")) {
     });
 }
 
+// slidesPerView permite modificar la cantidad de elementos que se muestran al mismo tiempo
+if (document.querySelector(".mySwiperTeam")) {
+    var swiperTeam = new Swiper(".mySwiperTeam", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        pagination: {
+            el: ".swiper-pagination-team",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next-team",
+            prevEl: ".swiper-button-prev-team",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+    });
+}
+
 // Nav open close
 const body = document.querySelector('body'),
     navMenu = body.querySelector('.menu-content'),
