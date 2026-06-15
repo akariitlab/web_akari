@@ -127,6 +127,18 @@ if (typeof ScrollReveal !== 'undefined') {
     sr.reveal(`.about-details, .time-table`, { origin: 'right' });
 }
 
+// Botón "Explorar" - Scroll hacia la sección inmediatamente inferior (#about)
+const exploreButtons = document.querySelectorAll('.home .button');
+const aboutSection = document.querySelector('#about');
+
+exploreButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
 // WhatsApp
 
 function toggleWhatsAppPopup() {
