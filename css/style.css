@@ -201,7 +201,14 @@ img {
   color: var(--text-color);
 }
 
-.header-active .icon-school {
+.logo-akari-svg {
+  height: 2rem;
+  width: auto;
+  fill: var(--white-color);
+  transition: var(--tran-0-5);
+}
+
+.header-active .logo-akari-svg {
   fill: var(--text-color);
 }
 
