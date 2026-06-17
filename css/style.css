@@ -1692,3 +1692,466 @@ img {
   background-color: #333;
   color: #fff;
 }
+
+/* ===== BUSINESS / STUDENTS SECTION ===== */
+
+.biz-students {
+  padding: 5rem 0 0;
+}
+
+.biz-section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.biz-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 3rem;
+}
+
+.biz-tab {
+  padding: 1rem 2.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--tran-0-3);
+}
+
+.biz-tab:hover {
+  color: var(--primary-color);
+}
+
+.biz-tab.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.biz-panel {
+  display: block;
+}
+
+.biz-panel--hidden {
+  display: none;
+}
+
+/* Hero */
+.biz-hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.biz-hero-content {
+  flex: 1;
+}
+
+.biz-hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.biz-hero-content .content-description,
+.biz-academy-content .content-description,
+.demo-modal .content-description {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.biz-cta-inner .content-description {
+  text-align: center;
+}
+
+.biz-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.biz-img {
+  width: 100%;
+  max-width: 420px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Cards */
+.biz-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.biz-card {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.8rem;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: var(--tran-0-3);
+}
+
+.biz-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(27, 37, 64, 0.1);
+  transform: translateY(-4px);
+}
+
+.biz-card-icon {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+}
+
+.biz-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+}
+
+.biz-card-desc {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.biz-card-arrow {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+/* CTA Band */
+.biz-cta-band {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d3f6b 100%);
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+}
+
+.biz-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.biz-cta-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.biz-cta-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.biz-cta-btn {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.biz-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.biz-cta-logos {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.biz-cta-logos-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee-logos 30s linear infinite;
+}
+
+@keyframes marquee-logos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.biz-cta-logo {
+  padding-right: 5rem;
+}
+
+.biz-cta-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity var(--tran-0-3);
+}
+
+.biz-cta-logo img:hover {
+  opacity: 1;
+}
+
+.biz-cta-logos:hover .biz-cta-logos-track {
+  animation-play-state: paused;
+}
+
+/* Career Academy */
+.biz-academy {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 5rem 0;
+}
+
+.biz-academy-image {
+  flex: 1;
+}
+
+.biz-academy-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.biz-academy-label {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.biz-academy-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+.biz-academy-check {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.biz-academy-check li {
+  font-size: 1.25rem;
+  color: #444;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.biz-academy-check li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.biz-academy-link {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-family: var(--font-family);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap var(--tran-0-3);
+}
+
+.biz-academy-link:hover {
+  gap: 1rem;
+}
+
+.biz-coming-soon {
+  text-align: center;
+  padding: 5rem 3rem;
+  color: #888;
+}
+
+/* Demo Modal */
+.demo-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-modal-overlay.open {
+  display: flex;
+}
+
+.demo-modal {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.demo-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.demo-modal-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.demo-modal-close {
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #888;
+  padding: 0 0.3rem;
+}
+
+.demo-modal-close:hover {
+  color: #333;
+}
+
+.demo-modal-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.demo-modal-benefits li {
+  font-size: 1.25rem;
+  color: #444;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.demo-modal-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.demo-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.demo-input {
+  padding: 0.9rem 1.2rem;
+  border: 1.5px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  transition: border-color var(--tran-0-3);
+  width: 100%;
+}
+
+.demo-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.demo-input--full {
+  grid-column: 1 / -1;
+}
+
+.demo-submit {
+  grid-column: 1 / -1;
+  width: 100%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .biz-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .biz-hero,
+  .biz-academy {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .biz-hero-image {
+    order: -1;
+  }
+
+  .biz-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .biz-cta-title {
+    font-size: 1.8rem;
+  }
+
+  .biz-academy-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .biz-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-form {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-input--full,
+  .demo-submit {
+    grid-column: 1;
+  }
+
+  .biz-tab {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}

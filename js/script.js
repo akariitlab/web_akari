@@ -137,3 +137,30 @@ function toggleWhatsAppPopup() {
         popup.style.display = "block";
     }
 }
+
+// Business / Students tabs
+function switchTab(tabName) {
+    document.querySelectorAll('.biz-panel').forEach(function(p) {
+        p.classList.add('biz-panel--hidden');
+    });
+    document.querySelectorAll('.biz-tab').forEach(function(t) {
+        t.classList.remove('active');
+    });
+    var panel = document.getElementById('tab-' + tabName);
+    if (panel) panel.classList.remove('biz-panel--hidden');
+    var activeTab = document.querySelector('[data-tab="' + tabName + '"]');
+    if (activeTab) activeTab.classList.add('active');
+}
+
+// Demo modal
+function toggleDemoModal() {
+    var overlay = document.getElementById('demo-modal-overlay');
+    overlay.classList.toggle('open');
+    document.body.style.overflowY = overlay.classList.contains('open') ? 'hidden' : '';
+}
+
+function closeDemoModal(event) {
+    if (event.target === document.getElementById('demo-modal-overlay')) {
+        toggleDemoModal();
+    }
+}
