@@ -196,79 +196,164 @@
 
                 </section>
 
-                <!-- About -->
-                <section class="section about" id="about">
+                <!-- Business / Students -->
+                <section class="section biz-students" id="empresas">
 
-                        <div class="about-content container">
+                        <div class="container">
+                                <h2 class="content-title biz-section-title">¿Con quién trabajamos?</h2>
+                                <div class="biz-tabs">
+                                        <button class="biz-tab active" data-tab="business" onclick="switchTab('business')">
+                                                <i class="bx bx-buildings"></i> Business
+                                        </button>
+                                        <button class="biz-tab" data-tab="students" onclick="switchTab('students')">
+                                                <i class="bx bx-book-open"></i> Estudiantes
+                                        </button>
+                                </div>
+                        </div>
 
-                                <div class="about-imageContent">
+                        <!-- Tab Business -->
+                        <div id="tab-business" class="biz-panel">
 
-                                        <img src="images/aboutImg.jpg" alt="Girl photo" class="about-img">
-
-
-                                        <div class="aboutImg-textBox">
-                                                <i class="bx bx-heart heart-icon flex"></i>
-
-                                                <p class="content-description">
-                                                        Realmente amé la clases en Akari, me llevó a otro nivel! 🚀
-                                                        Ahora sé que la tecnología es a lo que quiero dedicarme.
-                                                </p>
+                                <!-- Hero -->
+                                <div class="biz-hero container">
+                                        <div class="biz-hero-content">
+                                                <h2 class="biz-hero-title">Redefine la enseñanza, adaptada para sus estudiantes.</h2>
+                                                <p class="content-description">Forma una alianza con Akari y ofrece a tus alumnos acceso a cursos tecnológicos a precios competitivos. Somos el puente entre tus estudiantes y el futuro digital.</p>
+                                                <button class="button biz-demo-btn" onclick="toggleDemoModal()">Solicitar Demo</button>
+                                        </div>
+                                        <div class="biz-hero-image">
+                                                <img src="images/aboutImg.jpg" alt="Business education" class="biz-img">
                                         </div>
                                 </div>
 
+                                <!-- 4 Cards -->
+                                <div class="biz-cards container">
+                                        <div class="biz-card">
+                                                <i class="bx bx-group biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Alianza para precios competitivos</h3>
+                                                <p class="biz-card-desc">Accede a tarifas especiales en todos nuestros cursos para los estudiantes de tu institución.</p>
 
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-layer biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Plataforma flexible para cada institución</h3>
+                                                <p class="biz-card-desc">Adaptamos nuestra oferta académica a las necesidades específicas de tu institución educativa.</p>
 
-                                <div class="about-details">
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-check-shield biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Seguro y adaptable</h3>
+                                                <p class="biz-card-desc">Entorno de aprendizaje seguro e inclusivo, accesible desde cualquier dispositivo.</p>
 
-                                        <div class="about-text">
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-trending-up biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Seguimiento del progreso de los estudiantes</h3>
+                                                <p class="biz-card-desc">Reportes detallados del avance de cada estudiante para mantener a tu institución informada.</p>
 
-                                                <h4 class="content-subtitle">
-                                                        <i>Nuestros alumnos nos eligen</i>
-                                                </h4>
+                                        </div>
+                                </div>
 
-                                                <h2 class="content-title">
-                                                        Combinan teoría, práctica <br>
-                                                        y creamos soluciones
-                                                </h2>
+                                <!-- CTA Aliados -->
+                                <div class="biz-cta-band">
+                                        <div class="container biz-cta-inner">
+                                                <p class="biz-cta-label">Instituciones aliadas</p>
+                                                <h3 class="biz-cta-title">Únete a nuestra red de instituciones aliadas</h3>
+                                                <div class="biz-cta-logos">
+                                                        <div class="biz-cta-logos-track">
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                        </div>
+                                                </div>
+                                                <button class="button biz-cta-btn" onclick="toggleDemoModal()">Conocer más</button>
+                                        </div>
+                                </div>
 
-                                                <p class="content-description">
-                                                        Desde Akari apreciamos a los estudiante que hacen parte de
-                                                        nuestro hub! Somos un puente para conectarlos a sus profesiones
-                                                        y a su futuro. Eso nos llena de pasión para hacer cada proceso
-                                                        una aventura totalmente diferente y con un gran impacto positivo
-                                                        en sus vidas.
-                                                </p>
-
-                                                <ul class="about-lists flex">
-                                                        <li class="about-list">Aprende</li>
-                                                        <li class="about-list dot">•</li>
-                                                        <li class="about-list">Innova</li>
-                                                        <li class="about-list dot">•</li>
-                                                        <li class="about-list">Crea</li>
+                                <!-- Career Academy -->
+                                <div class="biz-academy container">
+                                        <div class="biz-academy-image">
+                                                <img src="images/aboutImg.jpg" alt="Career Academy" class="biz-img">
+                                        </div>
+                                        <div class="biz-academy-content">
+                                                <span class="biz-academy-label">CAREER ACADEMY</span>
+                                                <h3 class="biz-academy-title">Prepara a tus estudiantes para los trabajos más demandados</h3>
+                                                <p class="content-description">Refuerza la empleabilidad de los estudiantes con la formación profesional impartida por las principales empresas del mundo. Con Career Academy, permite a sus alumnos:</p>
+                                                <ul class="biz-academy-check">
+                                                        <li>Obtener un certificado profesional diseñado para prepararlos para el trabajo</li>
+                                                        <li>Adquirir las habilidades laborales comunes que exigen los empleadores</li>
+                                                        <li>Demostrar su dominio de sus habilidades con un portafolio de trabajos</li>
+                                                        <li>Explorar una variedad de funciones demandadas en todos los sectores</li>
                                                 </ul>
-
+                                                <button class="biz-academy-link flex" onclick="toggleDemoModal()">
+                                                        <span>Más información sobre Career Academy</span>
+                                                        <i class="bx bx-right-arrow-alt"></i>
+                                                </button>
                                         </div>
-
-                                        <div class="about-buttons flex">
-
-                                                <a href="https://calendar.app.google/M7oLR8shz3pNQja88" target="_blank">
-                                                        <button class="button">
-                                                                Agenda una sesión
-                                                        </button>
-                                                </a>
-
-                                                <a href="faqs.html" class="about-link flex" target="_blank">
-                                                        <span class="link-text">Más información</span>
-                                                        <i class="bx bx-right-arrow-alt about-arrowIcon"></i>
-                                                </a>
-
-                                        </div>
-
                                 </div>
 
+                        </div><!-- end tab-business -->
+
+                        <!-- Tab Students (placeholder) -->
+                        <div id="tab-students" class="biz-panel biz-panel--hidden">
+                                <div class="container biz-coming-soon">
+                                        <p class="content-description">Próximamente...</p>
+                                </div>
                         </div>
 
                 </section>
+
+                <!-- Demo Modal -->
+                <div class="demo-modal-overlay" id="demo-modal-overlay" onclick="closeDemoModal(event)">
+                        <div class="demo-modal">
+                                <div class="demo-modal-header">
+                                        <h3>¿Quiere saber más?</h3>
+                                        <button class="demo-modal-close" onclick="toggleDemoModal()">×</button>
+                                </div>
+                                <p class="content-description">Contáctenos para discutir cómo Akari puede ayudarle a desarrollar talento ágil con habilidades alineadas al trabajo.</p>
+                                <ul class="demo-modal-benefits">
+                                        <li>Desarrollar las competencias necesarias para impulsar el crecimiento</li>
+                                        <li>Atraer y retener el talento en todos los equipos</li>
+                                        <li>Aumentar la productividad de los empleados</li>
+                                </ul>
+                                <form class="demo-form" onsubmit="return false;">
+                                        <input type="text" placeholder="Nombre" class="demo-input">
+                                        <input type="text" placeholder="Apellido" class="demo-input">
+                                        <input type="email" placeholder="Correo corporativo" class="demo-input">
+                                        <input type="tel" placeholder="Teléfono" class="demo-input">
+                                        <input type="text" placeholder="Tipo de organización" class="demo-input demo-input--full">
+                                        <input type="text" placeholder="País" class="demo-input demo-input--full">
+                                        <button type="submit" class="button demo-submit">Enviar</button>
+                                </form>
+                        </div>
+                </div>
 
                 <!-- Nosotros -->
                 <section class="section nosotros" id="nosotros">
@@ -521,42 +606,7 @@
 
                 </section>
 
-                <!-- Brand -->
-                <section class="section brand">
-
-                        <div class="brand-container container">
-
-                                <h4 class="section-subtitle">
-                                        <i>Instituciones aliadas</i>
-                                </h4>
-
-                                <div class="brand-images">
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                </div>
-
-                        </div>
-
-                </section> <!-- Team -->
+<!-- Team -->
                 <section class="section team-section" id="team">
                         <div class="team-container container">
                                 <div class="team-header">
