@@ -21,7 +21,7 @@ if (document.querySelector(".mySwiperTeam")) {
     var swiperTeam = new Swiper(".mySwiperTeam", {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: false,
+        loop: true,
         pagination: {
             el: ".swiper-pagination-team",
             clickable: true,
