@@ -3,7 +3,7 @@
 if (document.querySelector(".mySwiper")) {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
-        //grabCursor: true,
+        grabCursor: true,
         loop: true,
         pagination: {
             el: ".swiper-pagination",
