@@ -3,7 +3,7 @@
 if (document.querySelector(".mySwiper")) {
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
-        //grabCursor: true,
+        grabCursor: true,
         loop: true,
         pagination: {
             el: ".swiper-pagination",
@@ -12,6 +12,34 @@ if (document.querySelector(".mySwiper")) {
         navigation: {
             nextEl: ".swiper-button-next", // Fixed typo here
             prevEl: ".swiper-button-prev",
+        },
+    });
+}
+
+// slidesPerView permite modificar la cantidad de elementos que se muestran al mismo tiempo
+if (document.querySelector(".mySwiperTeam")) {
+    var swiperTeam = new Swiper(".mySwiperTeam", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination-team",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next-team",
+            prevEl: ".swiper-button-prev-team",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
         },
     });
 }
@@ -99,6 +127,18 @@ if (typeof ScrollReveal !== 'undefined') {
     sr.reveal(`.about-details, .time-table`, { origin: 'right' });
 }
 
+// Botón "Explorar" - Scroll hacia la sección inmediatamente inferior (#about)
+const exploreButtons = document.querySelectorAll('.home .button');
+const aboutSection = document.querySelector('#about');
+
+exploreButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
 // WhatsApp
 
 function toggleWhatsAppPopup() {
@@ -107,5 +147,32 @@ function toggleWhatsAppPopup() {
         popup.style.display = "none";
     } else {
         popup.style.display = "block";
+    }
+}
+
+// Business / Students tabs
+function switchTab(tabName) {
+    document.querySelectorAll('.biz-panel').forEach(function(p) {
+        p.classList.add('biz-panel--hidden');
+    });
+    document.querySelectorAll('.biz-tab').forEach(function(t) {
+        t.classList.remove('active');
+    });
+    var panel = document.getElementById('tab-' + tabName);
+    if (panel) panel.classList.remove('biz-panel--hidden');
+    var activeTab = document.querySelector('[data-tab="' + tabName + '"]');
+    if (activeTab) activeTab.classList.add('active');
+}
+
+// Demo modal
+function toggleDemoModal() {
+    var overlay = document.getElementById('demo-modal-overlay');
+    overlay.classList.toggle('open');
+    document.body.style.overflowY = overlay.classList.contains('open') ? 'hidden' : '';
+}
+
+function closeDemoModal(event) {
+    if (event.target === document.getElementById('demo-modal-overlay')) {
+        toggleDemoModal();
     }
 }

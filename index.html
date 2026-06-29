@@ -72,11 +72,8 @@
                 <nav class="nav container flex">
 
                         <a href="#" class="logo-content flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff"
-                                        viewBox="0 0 24 24" class="icon-school">
-                                        <path
-                                                d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z">
-                                        </path>
+                                <svg viewBox="0 0 247 216" class="logo-akari-svg" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M84.609 38.741C74.339 60.049 63.944 81.757 61.508 86.982C57.336 95.932 38.146 135.791 20.826 171.482C16.556 180.282 10.123 193.557 6.531 200.982L0 214.482L27.855 214.748L55.711 215.013L63.996 210.676C68.553 208.291 77.456 203.394 83.781 199.794C90.106 196.195 100.456 190.427 106.781 186.977C113.106 183.527 118.402 180.608 118.549 180.491C118.697 180.374 117.362 176.949 115.582 172.88C112.628 166.127 112.35 164.61 112.385 155.482C112.418 147.013 112.84 144.429 115.142 138.605C118.416 130.32 121.921 125.124 128.693 118.52C136.474 110.93 135.288 109.67 125.983 115.64C122.847 117.652 117.581 120.725 114.281 122.468C110.981 124.211 103.5 128.608 97.656 132.239L87.03 138.841L92.511 126.162C95.525 119.188 98.597 111.571 99.337 109.236C100.077 106.901 104.256 96.551 108.622 86.236C112.989 75.921 117.817 64.196 119.351 60.18C120.886 56.164 122.398 52.728 122.711 52.546C123.025 52.363 125.912 57.899 129.127 64.848C139.526 87.32 146.263 101.15 147.052 101.644C147.477 101.909 152.427 99.13 158.052 95.469C163.678 91.807 171.286 86.937 174.959 84.647L181.638 80.482L166.76 49.982C158.578 33.207 149.687 15.207 147.004 9.982L142.125 0.481998L122.703 0.240997L103.281 0L84.609 38.741ZM180.781 87.797C179.406 88.654 172.206 93.608 164.781 98.805C147.466 110.924 137.445 120.59 134.761 127.764C130.889 138.115 133.002 149.275 140.187 156.415C145.206 161.402 174.466 178.855 202.281 193.452C207.781 196.338 216.17 200.948 220.922 203.696C235.489 212.117 246.781 216.831 246.781 214.49C246.781 213.967 216.843 151.944 211.299 140.982C203.719 125.994 186.986 91.319 186.371 89.324C185.468 86.4 183.766 85.935 180.781 87.797Z"/>
                                 </svg>
                                 <span class="logo-text">Akari.</span>
                         </a>
@@ -84,10 +81,11 @@
                         <div class="menu-content">
 
                                 <ul class="menu-list flex">
-                                        <li><a href="#home" class="nav-link active-navlink">Inicio</a></li>
+                                        <li><a href="#home" class="nav-link">Inicio</a></li>
                                         <li><a href="#about" class="nav-link">Experiencia</a></li>
+                                        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                                         <li><a href="#menu" class="nav-link">Cursos</a></li>
-                                        <li><a href="#review" class="nav-link">Equipo</a></li>
+                                        <li><a href="#team" class="nav-link">Equipo</a></li>
                                 </ul>
 
                                 <div class="media-icons flex">
@@ -198,74 +196,255 @@
 
                 </section>
 
-                <!-- About -->
-                <section class="section about" id="about">
+                <!-- Business / Students -->
+                <section class="section biz-students" id="empresas">
 
-                        <div class="about-content container">
+                        <div class="container">
+                                <h2 class="content-title biz-section-title">¿Con quién trabajamos?</h2>
+                                <div class="biz-tabs">
+                                        <button class="biz-tab active" data-tab="business" onclick="switchTab('business')">
+                                                <i class="bx bx-buildings"></i> Business
+                                        </button>
+                                        <button class="biz-tab" data-tab="students" onclick="switchTab('students')">
+                                                <i class="bx bx-book-open"></i> Estudiantes
+                                        </button>
+                                </div>
+                        </div>
 
-                                <div class="about-imageContent">
+                        <!-- Tab Business -->
+                        <div id="tab-business" class="biz-panel">
 
-                                        <img src="images/aboutImg.jpg" alt="Girl photo" class="about-img">
-
-
-                                        <div class="aboutImg-textBox">
-                                                <i class="bx bx-heart heart-icon flex"></i>
-
-                                                <p class="content-description">
-                                                        Realmente amé la clases en Akari, me llevó a otro nivel! 🚀
-                                                        Ahora sé que la tecnología es a lo que quiero dedicarme.
-                                                </p>
+                                <!-- Hero -->
+                                <div class="biz-hero container">
+                                        <div class="biz-hero-content">
+                                                <h2 class="biz-hero-title">Redefine la enseñanza, adaptada para sus estudiantes.</h2>
+                                                <p class="content-description">Forma una alianza con Akari y ofrece a tus alumnos acceso a cursos tecnológicos a precios competitivos. Somos el puente entre tus estudiantes y el futuro digital.</p>
+                                                <button class="button biz-demo-btn" onclick="toggleDemoModal()">Solicitar Demo</button>
+                                        </div>
+                                        <div class="biz-hero-image">
+                                                <img src="images/aboutImg.jpg" alt="Business education" class="biz-img">
                                         </div>
                                 </div>
 
+                                <!-- 4 Cards -->
+                                <div class="biz-cards container">
+                                        <div class="biz-card">
+                                                <i class="bx bx-group biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Alianza para precios competitivos</h3>
+                                                <p class="biz-card-desc">Accede a tarifas especiales en todos nuestros cursos para los estudiantes de tu institución.</p>
 
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-layer biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Plataforma flexible para cada institución</h3>
+                                                <p class="biz-card-desc">Adaptamos nuestra oferta académica a las necesidades específicas de tu institución educativa.</p>
 
-                                <div class="about-details">
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-check-shield biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Seguro y adaptable</h3>
+                                                <p class="biz-card-desc">Entorno de aprendizaje seguro e inclusivo, accesible desde cualquier dispositivo.</p>
 
-                                        <div class="about-text">
+                                        </div>
+                                        <div class="biz-card">
+                                                <i class="bx bx-trending-up biz-card-icon"></i>
+                                                <h3 class="biz-card-title">Seguimiento del progreso de los estudiantes</h3>
+                                                <p class="biz-card-desc">Reportes detallados del avance de cada estudiante para mantener a tu institución informada.</p>
 
-                                                <h4 class="content-subtitle">
-                                                        <i>Nuestros alumnos nos eligen</i>
-                                                </h4>
+                                        </div>
+                                </div>
 
-                                                <h2 class="content-title">
-                                                        Combinan teoría, práctica <br>
-                                                        y creamos soluciones
-                                                </h2>
+                                <!-- CTA Aliados -->
+                                <!--<div class="biz-cta-band">
+                                        <div class="container biz-cta-inner">
+                                                <p class="biz-cta-label">Instituciones aliadas</p>
+                                                <h3 class="biz-cta-title">Únete a nuestra red de instituciones aliadas</h3>
+                                                <div class="biz-cta-logos">
+                                                        <div class="biz-cta-logos-track">
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                                <div class="biz-cta-logo"><img src="images/escudo.png" alt="Institución aliada"></div>
+                                                        </div>
+                                                </div>
+                                                <button class="button biz-cta-btn" onclick="toggleDemoModal()">Conocer más</button>
+                                        </div>
+                                </div> -->
 
-                                                <p class="content-description">
-                                                        Desde Akari apreciamos a los estudiante que hacen parte de
-                                                        nuestro hub! Somos un puente para conectarlos a sus profesiones
-                                                        y a su futuro. Eso nos llena de pasión para hacer cada proceso
-                                                        una aventura totalmente diferente y con un gran impacto positivo
-                                                        en sus vidas.
-                                                </p>
-
-                                                <ul class="about-lists flex">
-                                                        <li class="about-list">Aprende</li>
-                                                        <li class="about-list dot">•</li>
-                                                        <li class="about-list">Innova</li>
-                                                        <li class="about-list dot">•</li>
-                                                        <li class="about-list">Crea</li>
+                                <!-- Career Academy -->
+                                <div class="biz-academy container">
+                                        <div class="biz-academy-image">
+                                                <img src="images/aboutImg.jpg" alt="Career Academy" class="biz-img">
+                                        </div>
+                                        <div class="biz-academy-content">
+                                                <span class="biz-academy-label">CAREER ACADEMY</span>
+                                                <h3 class="biz-academy-title">Prepara a tus estudiantes para los trabajos más demandados</h3>
+                                                <p class="content-description">Refuerza la empleabilidad de los estudiantes con la formación profesional impartida por las principales empresas del mundo. Con Career Academy, permite a sus alumnos:</p>
+                                                <ul class="biz-academy-check">
+                                                        <li>Obtener un certificado profesional diseñado para prepararlos para el trabajo</li>
+                                                        <li>Adquirir las habilidades laborales comunes que exigen los empleadores</li>
+                                                        <li>Demostrar su dominio de sus habilidades con un portafolio de trabajos</li>
+                                                        <li>Explorar una variedad de funciones demandadas en todos los sectores</li>
                                                 </ul>
+                                                <button class="biz-academy-link flex" onclick="toggleDemoModal()">
+                                                        <span>Más información sobre Career Academy</span>
+                                                        <i class="bx bx-right-arrow-alt"></i>
+                                                </button>
+                                        </div>
+                                </div>
 
+                        </div><!-- end tab-business -->
+
+                        <!-- Tab Students (placeholder) -->
+                        <div id="tab-students" class="biz-panel biz-panel--hidden">
+                                <div class="container biz-coming-soon">
+                                        <p class="content-description">Próximamente...</p>
+                                </div>
+                        </div>
+
+                </section>
+
+                <!-- Demo Modal -->
+                <div class="demo-modal-overlay" id="demo-modal-overlay" onclick="closeDemoModal(event)">
+                        <div class="demo-modal">
+                                <div class="demo-modal-header">
+                                        <h3>¿Quiere saber más?</h3>
+                                        <button class="demo-modal-close" onclick="toggleDemoModal()">×</button>
+                                </div>
+                                <p class="content-description">Contáctenos para discutir cómo Akari puede ayudarle a desarrollar talento ágil con habilidades alineadas al trabajo.</p>
+                                <ul class="demo-modal-benefits">
+                                        <li>Desarrollar las competencias necesarias para impulsar el crecimiento</li>
+                                        <li>Atraer y retener el talento en todos los equipos</li>
+                                        <li>Aumentar la productividad de los empleados</li>
+                                </ul>
+                                <form class="demo-form" onsubmit="return false;">
+                                        <input type="text" placeholder="Nombre" class="demo-input">
+                                        <input type="text" placeholder="Apellido" class="demo-input">
+                                        <input type="email" placeholder="Correo corporativo" class="demo-input">
+                                        <input type="tel" placeholder="Teléfono" class="demo-input">
+                                        <input type="text" placeholder="Tipo de organización" class="demo-input demo-input--full">
+                                        <input type="text" placeholder="País" class="demo-input demo-input--full">
+                                        <button type="submit" class="button demo-submit">Enviar</button>
+                                </form>
+                        </div>
+                </div>
+
+                <!-- Nosotros -->
+                <section class="section nosotros" id="nosotros">
+
+                        <div class="nosotros-container container">
+
+                                <div class="nosotros-header">
+                                        <h4 class="section-subtitle nosotros-subtitle">
+                                                <i>Conócenos</i>
+                                        </h4>
+
+                                        <h2 class="section-title nosotros-title">
+                                                ¿Qué hacemos en Akari?
+                                        </h2>
+                                </div>
+
+                                <div class="nosotros-grid">
+
+                                        <!-- Misión -->
+                                        <div class="nosotros-card nosotros-mision">
+                                                <div class="nosotros-card-icon">
+                                                        <i class="bx bx-rocket"></i>
+                                                </div>
+                                                <h3 class="nosotros-card-title">Nuestra Misión</h3>
+                                                <p class="nosotros-card-text">
+                                                        Akari nace de la necesidad de enseñar y fortalecer habilidades
+                                                        técnicas en los jóvenes. La tecnología y la ciencia son dos
+                                                        áreas focales, las cuáles tendrán demanda y esto requiere formar
+                                                        a personas íntegras y capaces.
+                                                </p>
                                         </div>
 
-                                        <div class="about-buttons flex">
-
-                                                <a href="https://calendar.app.google/M7oLR8shz3pNQja88" target="_blank">
-                                                        <button class="button">
-                                                                Agenda una sesión
-                                                        </button>
-                                                </a>
-
-                                                <a href="#" class="about-link flex">
-                                                        <span class="link-text">Más información</span>
-                                                        <i class="bx bx-right-arrow-alt about-arrowIcon"></i>
-                                                </a>
-
+                                        <!-- Especialización -->
+                                        <div class="nosotros-card nosotros-especializacion">
+                                                <div class="nosotros-card-icon">
+                                                        <i class="bx bx-code-alt"></i>
+                                                </div>
+                                                <h3 class="nosotros-card-title">Especialización</h3>
+                                                <p class="nosotros-card-text">
+                                                        Nos especializamos en crear cursos de acuerdo a los
+                                                        requerimientos del mercado, centrados en tecnología como la
+                                                        enseñanza de lenguajes de programación, ciencia de datos u otros
+                                                        campos afines.
+                                                </p>
                                         </div>
 
+                                        <!-- Visión -->
+                                        <div class="nosotros-card nosotros-vision">
+                                                <div class="nosotros-card-icon">
+                                                        <i class="bx bx-bulb"></i>
+                                                </div>
+                                                <h3 class="nosotros-card-title">Nuestra Visión</h3>
+                                                <p class="nosotros-card-text">
+                                                        Revolucionamos la educación, al centrar al estudiantil como
+                                                        nuestro jefe principal para brindarle nuevas experiencias,
+                                                        aprendizajes y nuevas formas de ver su futuro profesional.
+                                                </p>
+                                        </div>
+
+                                </div>
+
+                                <!-- Valores -->
+                                <div class="nosotros-valores">
+                                        <h3 class="nosotros-valores-title">Nuestros Valores</h3>
+                                        <div class="nosotros-valores-grid">
+                                                <div class="valor-item">
+                                                        <i class="bx bx-world"></i>
+                                                        <span>Responsabilidad social</span>
+                                                </div>
+                                                <div class="valor-item">
+                                                        <i class="bx bx-palette"></i>
+                                                        <span>Innovación y creatividad</span>
+                                                </div>
+                                                <div class="valor-item">
+                                                        <i class="bx bx-conversation"></i>
+                                                        <span>Escucha activa</span>
+                                                </div>
+                                                <div class="valor-item">
+                                                        <i class="bx bx-group"></i>
+                                                        <span>Diversidad</span>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!-- Frase -->
+                                <div class="nosotros-quote">
+                                        <i class="bx bxs-quote-alt-left nosotros-quote-icon"></i>
+                                        <blockquote class="nosotros-quote-text">
+                                                La educación es el arte de hacer visibles las cosas invisibles
+                                        </blockquote>
+                                        <cite class="nosotros-quote-author">— Jean-François Lyotard</cite>
                                 </div>
 
                         </div>
@@ -311,8 +490,7 @@
                                                                 </h4>
 
                                                                 <p class="menuItem-des">
-                                                                        Lorem ipsum dolor sit amet consectetur
-                                                                        adipisicing elit.
+                                                                        Aprende Javascript desde lo más básico y conviertete en experto.
                                                                 </p>
 
                                                         </div>
@@ -337,8 +515,7 @@
                                                                 </h4>
 
                                                                 <p class="menuItem-des">
-                                                                        Lorem ipsum dolor sit amet consectetur
-                                                                        adipisicing elit.
+                                                                    Dominarás las bases de C++ y lógica de programación.
                                                                 </p>
 
                                                         </div>
@@ -363,8 +540,7 @@
                                                                 </h4>
 
                                                                 <p class="menuItem-des">
-                                                                        Lorem ipsum dolor sit amet consectetur
-                                                                        adipisicing elit.
+                                                                    Si aún no sabes si la programación es lo tuyo.. No te preocupes! Aprende programación básica.
                                                                 </p>
 
                                                         </div>
@@ -382,39 +558,39 @@
                                         <div class="time-table">
 
                                                 <span class="time-topic">
-                                                        Opening Hours
+                                                        Horarios de disponibilidad
                                                 </span>
 
                                                 <ul class="time-lists">
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Monday</span>
+                                                                <span class="open-day">Lunes</span>
                                                                 <span class="open-time">08:00 - 20:00</span>
                                                         </li>
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Tuesday</span>
+                                                                <span class="open-day">Martes</span>
                                                                 <span class="open-time">08:00 - 20:00</span>
                                                         </li>
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Wednesday</span>
+                                                                <span class="open-day">Miércoles</span>
                                                                 <span class="open-time">08:00 - 20:00</span>
                                                         </li>
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Thursday</span>
+                                                                <span class="open-day">Jueves</span>
                                                                 <span class="open-time">08:00 - 20:00</span>
                                                         </li>
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Friday</span>
-                                                                <span class="open-time">08:00 - 22:00</span>
+                                                                <span class="open-day">Viernes</span>
+                                                                <span class="open-time">08:00 - 20:00</span>
                                                         </li>
 
                                                         <li class="time-list flex">
-                                                                <span class="open-day">Sunday</span>
-                                                                <span class="open-time">Closed</span>
+                                                                <span class="open-day">Sabado</span>
+                                                                <span class="open-time">08:00 - 13:00</span>
                                                         </li>
 
                                                 </ul>
@@ -427,276 +603,232 @@
 
                 </section>
 
-                <!-- Brand -->
-                <section class="section brand">
-
-                        <div class="brand-container container">
-
-                                <h4 class="section-subtitle">
-                                        <i>Instituciones aliadas</i>
-                                </h4>
-
-                                <div class="brand-images">
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                        <div class="brand-image">
-                                                <img src="images/escudo.png" alt="Brand">
-                                        </div>
-
-                                </div>
-
-                        </div>
-
-                </section>
-
-                <!-- Team -->
-                <section class="section review" id="review">
-
-                        <div class="review-container container">
-
-                                <div class="review-text">
-
-                                        <h4 class="section-subtitle">
-                                                <i>Equipo Akari</i>
-                                        </h4>
-
-                                        <h2 class="section-title">
-                                                Conoce a las personas que integran Akari
-                                        </h2>
-
+<!-- Team -->
+                <section class="section team-section" id="team">
+                        <div class="team-container container">
+                                <div class="team-header">
+                                        <h2 class="section-title">Equipo Akari</h2>
                                         <p class="section-description">
-                                                Con pasión y amor hacía la educación en LATAM.
+                                                Conoce a las personas que integran Akari<br>
+                                                Con pasión y amor hacia la educación en LATAM.
                                         </p>
-
                                 </div>
 
-                                <div class="testimonial swiper mySwiper">
-
+                                <div class="swiper mySwiperTeam">
                                         <div class="swiper-wrapper">
-
-                                                <!-- Review 1 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Jeremy.jpeg" alt="Jeremy"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-                                                                "Iluminando tu camino hacia el futuro, transformando tus
-                                                                sueños en oportunidades."
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Jeremy Andre Callacna Romero</span>
-                                                                <span class="job">CEO Akari</span>
+                                                <!-- Team Member 1 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Jeremy.jpeg" alt="Jeremy">
                                                         </div>
-
+                                                        <span class="name">Jeremy</span>
+                                                        <span class="job">CEO</span>
+                                                        <p class="bio">Iluminando tu camino hacia el futuro,
+                                                                transformando tus sueños en oportunidades.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/jeremy-andre-callacna-romero/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 2 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Yuli.png" alt="Pedro" class="review-img">
-
-                                                        <p class="review-quote">
-                                                                Caminar con el cambio en tecnología y educación.
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Pedro Ricardo</span>
-                                                                <span class="job">Líder de Tecnología</span>
+                                                <!-- Team Member 2 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Yuli.png" alt="Yulissa">
                                                         </div>
-
+                                                        <span class="name">Yulissa Restrepo Arango</span>
+                                                        <span class="job">Líder de Tecnología</span>
+                                                        <p class="bio">Caminar con el cambio en tecnología y educación.
+                                                        </p>
+                                                        <div class="team-social">
+                                                                <a href="#" target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-
-
-                                                <!-- Review 2 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Yuli.png" alt="Yulissa"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-                                                                Caminar con el cambio en tecnología y educación.
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Yulissa Restrepo Arango</span>
-                                                                <span class="job">Líder de Tecnología</span>
+                                                <!-- Team Member 3 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Francisco.jpeg" alt="Francisco">
                                                         </div>
-
+                                                        <span class="name">Francisco González Correa</span>
+                                                        <span class="job">Miembro del equipo TI</span>
+                                                        <p class="bio">El aprendizaje de hoy construye las oportunidades
+                                                                de mañana.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/francisco-gonzalez-correa-00947140a/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 5 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Nallerly.jpeg" alt="Nallerly"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-                                                                Insert frase
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Nallely Yasmin Paredes Barraza</span>
-                                                                <span class="job">Líder de Tecnología</span>
+                                                <!-- Team Member 4 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Elian.jpeg" alt="Elian">
                                                         </div>
-
+                                                        <span class="name">Elian Zurita Aburto</span>
+                                                        <span class="job">Miembro del equipo TI</span>
+                                                        <p class="bio">Estudiar hoy es liderar mañana.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/elian-zurita-aburto/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 3 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Francisco.jpeg" alt="Francisco"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-                                                                El aprendizaje de hoy construye las oportunidades de
-                                                                mañana.
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Francisco González Correa</span>
-                                                                <span class="job">Miembro del equipo de
-                                                                        Tecnología</span>
+                                                <!-- Team Member 5 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Nallerly.jpeg" alt="Nallely">
                                                         </div>
-
+                                                        <span class="name">Nallely Paredes Barraza</span>
+                                                        <span class="job">Líder de Tecnología</span>
+                                                        <p class="bio">El éxito no es de quien corre, sino de quien sabe a dónde va.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/nallely-yasmin-paredes-barraza-83319325a/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 4 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Elian.jpeg" alt="Elian"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Elian Zurita Aburto</span>
-                                                                <span class="job">Miembro del equipo de
-                                                                        Tecnología</span>
+                                                <!-- Team Member 6 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Jair.jpeg" alt="Jhair">
                                                         </div>
-
+                                                        <span class="name">Jhair Melendez Blas</span>
+                                                        <span class="job">Miembro del equipo TI</span>
+                                                        <p class="bio">La adaptabilidad es mi ventaja; evolucionar, mi constante.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/jhairroussell/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-
-                                                <!-- Review 6 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Jhair.jpeg" alt="" class="review-img">
-
-                                                        <p class="review-quote">
-                                                                Insert frase
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Jhair Melendez Blas</span>
-                                                                <span class="job">Miembro del equipo de
-                                                                        Tecnología</span>
+                                                <!-- Team Member 7 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Frank.jpeg" alt="Frank">
                                                         </div>
-
+                                                        <span class="name">Frank Condor Huarhuachi</span>
+                                                        <span class="job">Miembro del equipo TI</span>
+                                                        <p class="bio">Diseñando soluciones tecnológicas que simplifican procesos y conectan a las personas con lo que necesitan.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/frank-kevin-condor-huarhuachi/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 8 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Frank.jpeg" alt="Frank"
-                                                                class="review-img">
-
-                                                        <p class="review-quote">
-                                                                Insert frase
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Frank Kevin Condor
-                                                                        Huarcahuachi</span>
-                                                                <span class="job">Miembro del equipo de
-                                                                        Tecnología</span>
+                                                <!-- Team Member 8 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Ana.jpeg" alt="Ana Lia">
                                                         </div>
-
+                                                        <span class="name">Ana Lia Moreno</span>
+                                                        <span class="job">Líder de Marketing</span>
+                                                        <p class="bio">No solo es recibir valor, sino crearlo.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/ana-l%C3%ADa-moreno-951853308/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 7 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Ana.jpeg" alt="Ana" class="review-img">
-
-                                                        <p class="review-quote">
-                                                                No solo es recibir valor, sino crearlo
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Ana Lia Moreno</span>
-                                                                <span class="job">Líder de Marketing</span>
+                                                <!-- Team Member 9 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Daniela.jpeg" alt="Daniella">
                                                         </div>
-
+                                                        <span class="name">Daniella Atahuaman Alvarez</span>
+                                                        <span class="job">Líder de Marketing</span>
+                                                        <p class="bio">La actitud lo cambia todo.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/daniella-atahuaman-alvarez-00b76330a/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
-                                                <!-- Review 7 -->
-                                                <div class="testi-content swiper-slide flex">
-
-                                                        <img src="images/Foto_Ana.jpeg" alt="Ana" class="review-img">
-
-                                                        <p class="review-quote">
-                                                                No solo es recibir valor, sino crearlo
-                                                        </p>
-
-                                                        <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-                                                        <div class="testi-personDetails">
-                                                                <span class="name">Daniella Atahuaman Alvarez</span>
-                                                                <span class="job">Líder de Marketing</span>
+                                                <!-- Team Member 10 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Pedro.jpg" alt="Pedro">
                                                         </div>
-
+                                                        <span class="name">Pedro Vargas Leon</span>
+                                                        <span class="job">Líder de Tecnología</span>
+                                                        <p class="bio">Un gran poder conlleva una gran responsabilidad.
+                                                        </p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/pedro-ricardo-vargas-leon-b3874a340/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
                                                 </div>
 
+                                                <!-- Team Member 11 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Xiomara.png" alt="Xiomara">
+                                                        </div>
+                                                        <span class="name">Xiomara Callacna Romero</span>
+                                                        <span class="job">Miembro del equipo Calidad Académica</span>
+                                                        <p class="bio">Determinación y responsabilidad para no rendirme y construir lo que quiero.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/xiomara-maite-callacna-romero-7a1431361/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
+                                                </div>
 
+                                                <!-- Team Member 12 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Alejandro.jpeg" alt="Alejandro">
+                                                        </div>
+                                                        <span class="name">Alejandro Quispe Tufino</span>
+                                                        <span class="job">Miembro del equipo Calidad Académica</span>
+                                                        <p class="bio">La paciencia marca el ritmo; la constancia, el camino.</p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/alejandro-quispe-tufino/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
+                                                </div>
 
+                                                <!-- Team Member 13 -->
+                                                <div class="team-card swiper-slide">
+                                                        <div class="team-img-placeholder">
+                                                                <img src="images/Foto_Gia.jpeg" alt="Giancarlos">
+                                                        </div>
+                                                        <span class="name">Giancarlos Zelada</span>
+                                                        <span class="job">Miembro del equipo Calidad Académica</span>
+                                                        <p class="bio">Cada línea de código que creo busca convertir una
+                                                                idea en una experiencia útil, moderna y fácil de usar.
+                                                        </p>
+                                                        <div class="team-social">
+                                                                <a href="https://www.linkedin.com/in/giancarlos-zelada-471725354/"
+                                                                        target="_blank" rel="noopener noreferrer"><i
+                                                                                class='bx bxl-linkedin'></i></a>
+                                                        </div>
+                                                </div>
                                         </div>
 
-                                        <div class="swiper-button-next swiper-navBtn"></div>
-                                        <div class="swiper-button-prev swiper-navBtn"></div>
-                                        <div class="swiper-pagination"></div>
-
+                                        <div class="swiper-nav-container">
+                                                <div class="swiper-pagination-team"></div>
+                                                <div class="team-navBtns">
+                                                        <div class="team-swiper-button swiper-button-prev-team"><i
+                                                                        class='bx bx-left-arrow-alt'></i></div>
+                                                        <div class="team-swiper-button swiper-button-next-team"><i
+                                                                        class='bx bx-right-arrow-alt'></i></div>
+                                                </div>
+                                        </div>
                                 </div>
 
                         </div>
-
                 </section>
 
                 <!-- Newsletter -->
@@ -735,11 +867,8 @@
                         <div class="footer-container container">
                                 <div class="footer-content">
                                         <a href="#" class="logo-content flex">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        fill="#ffffff" viewBox="0 0 24 24">
-                                                        <path
-                                                                d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z">
-                                                        </path>
+                                                <svg viewBox="0 0 247 216" class="logo-akari-svg" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M84.609 38.741C74.339 60.049 63.944 81.757 61.508 86.982C57.336 95.932 38.146 135.791 20.826 171.482C16.556 180.282 10.123 193.557 6.531 200.982L0 214.482L27.855 214.748L55.711 215.013L63.996 210.676C68.553 208.291 77.456 203.394 83.781 199.794C90.106 196.195 100.456 190.427 106.781 186.977C113.106 183.527 118.402 180.608 118.549 180.491C118.697 180.374 117.362 176.949 115.582 172.88C112.628 166.127 112.35 164.61 112.385 155.482C112.418 147.013 112.84 144.429 115.142 138.605C118.416 130.32 121.921 125.124 128.693 118.52C136.474 110.93 135.288 109.67 125.983 115.64C122.847 117.652 117.581 120.725 114.281 122.468C110.981 124.211 103.5 128.608 97.656 132.239L87.03 138.841L92.511 126.162C95.525 119.188 98.597 111.571 99.337 109.236C100.077 106.901 104.256 96.551 108.622 86.236C112.989 75.921 117.817 64.196 119.351 60.18C120.886 56.164 122.398 52.728 122.711 52.546C123.025 52.363 125.912 57.899 129.127 64.848C139.526 87.32 146.263 101.15 147.052 101.644C147.477 101.909 152.427 99.13 158.052 95.469C163.678 91.807 171.286 86.937 174.959 84.647L181.638 80.482L166.76 49.982C158.578 33.207 149.687 15.207 147.004 9.982L142.125 0.481998L122.703 0.240997L103.281 0L84.609 38.741ZM180.781 87.797C179.406 88.654 172.206 93.608 164.781 98.805C147.466 110.924 137.445 120.59 134.761 127.764C130.889 138.115 133.002 149.275 140.187 156.415C145.206 161.402 174.466 178.855 202.281 193.452C207.781 196.338 216.17 200.948 220.922 203.696C235.489 212.117 246.781 216.831 246.781 214.49C246.781 213.967 216.843 151.944 211.299 140.982C203.719 125.994 186.986 91.319 186.371 89.324C185.468 86.4 183.766 85.935 180.781 87.797Z"/>
                                                 </svg>
                                                 <span class="logo-text">Akari.</span>
                                         </a>
@@ -750,12 +879,6 @@
                                                 pensamientos solidos y criticos
                                                 para formar a los jovenes del futuro.
                                         </p>
-                                        <div class="footer-location flex">
-                                                <i class="bx bx-map map-icon"></i>
-                                                <div class="location-text">
-                                                        Perú, Lima
-                                                </div>
-                                        </div>
                                 </div>
                                 <div class="footer-linkContent">
                                         <ul class="footer-links">
@@ -763,15 +886,18 @@
                                                 <li><a href="faqs.html" class="footer-link">FAQs</a></li>
                                                 <li><a href="#" class="footer-link">Politica de privacidad</a></li>
                                                 <li><a href="https://www.notion.so/Busca-una-oportunidad-en-Akari-4a7a97714fc382ae83cd810b8d76d422" class="footer-link" target="_blank">Trabaja con nosotros</a></li>
+                                                <li><a href="https://app.notion.com/p/Akari-Pol-tica-de-Privacidad-28-mayo-2026-f3078d33d5a8442c9b8d773024469048?source=copy_link" class="footer-link" target="_blank">Politica de privacidad</a></li>
+                                                <li><a href="https://app.notion.com/p/Busca-una-oportunidad-en-Akari-4a7a97714fc382ae83cd810b8d76d422?source=copy_link"
+                                                                class="footer-link" target="_blank">Trabaja con
+                                                                nosotros</a></li>
                                         </ul>
                                 </div>
                         </div>
 
                         <div class="footer-copyRight">
-                                &#169; Akari. All rights reserved
+                                &#169; Akari. Todos los derechos reservados.
                         </div>
                 </footer>
-
 
                 <!-- Scroll -->
 
