@@ -84,7 +84,7 @@
                                         <li><a href="#home" class="nav-link">Inicio</a></li>
                                         <li><a href="#about" class="nav-link">Experiencia</a></li>
                                         <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                                        <li><a href="#menu" class="nav-link">Cursos</a></li>
+                                        <li><a href="#menu" class="nav-link" onclick="switchTab('students')">Cursos</a></li>
                                         <li><a href="#team" class="nav-link">Equipo</a></li>
                                 </ul>
 
@@ -321,11 +321,160 @@
 
                         </div><!-- end tab-business -->
 
-                        <!-- Tab Students (placeholder) -->
+                        <!-- Tab Students -->
                         <div id="tab-students" class="biz-panel biz-panel--hidden">
-                                <div class="container biz-coming-soon">
-                                        <p class="content-description">Próximamente...</p>
-                                </div>
+
+                                <!-- Menu -->
+                                <section class="section menu" id="menu">
+
+                                        <div class="menu-container container">
+
+                                                <div class="menu-text">
+
+                                                        <h4 class="section-subtitle">
+                                                                <i style=" color: white;">Nuestros cursos</i>
+                                                        </h4>
+
+                                                        <h2 class="section-title">
+                                                                Los cursos más populares
+                                                        </h2>
+
+                                                        <p class="section-description">
+                                                                Conoce los cursos que actualmente se encuentran disponibles y con
+                                                                inscripciones abiertas.
+                                                        </p>
+
+                                                </div>
+
+                                                <div class="menu-content">
+
+                                                        <div class="menu-items">
+
+                                                                <!-- Item -->
+                                                                <div class="menu-item flex">
+
+                                                                        <img src="images/copyrightfreepictures-javascript-736400_1920.png"
+                                                                                alt="Curso de JavaScript" class="menu-img">
+
+                                                                        <div class="menuItem-details">
+
+                                                                                <h4 class="menuItem-topic">
+                                                                                        Curso de JavaScript
+                                                                                </h4>
+
+                                                                                <p class="menuItem-des">
+                                                                                        Aprende Javascript desde lo más básico y conviertete en experto.
+                                                                                </p>
+
+                                                                        </div>
+
+                                                                        <div class="menuItem-cta flex">
+                                                                                <a class="button menuItem-btn" data-curso="javascript"
+                                                                                        target="_blank" rel="noopener">Conoce más</a>
+                                                                        </div>
+
+                                                                </div>
+
+                                                                <!-- Item -->
+                                                                <div class="menu-item flex">
+
+                                                                        <i class="bx bxl-python menu-icon"></i>
+
+                                                                        <div class="menuItem-details">
+
+                                                                                <h4 class="menuItem-topic">
+                                                                                        Curso de Python
+                                                                                </h4>
+
+                                                                                <p class="menuItem-des">
+                                                                                    Domina Python desde cero y automatiza tareas del mundo real.
+                                                                                </p>
+
+                                                                        </div>
+
+                                                                        <div class="menuItem-cta flex">
+                                                                                <a class="button menuItem-btn" data-curso="python"
+                                                                                        target="_blank" rel="noopener">Conoce más</a>
+                                                                        </div>
+
+                                                                </div>
+
+                                                                <!-- Item -->
+                                                                <div class="menu-item flex">
+
+                                                                        <img src="images/krzysztof-m-laptop-3173613_1920.png"
+                                                                                alt="Curso de Programación Básica" class="menu-img">
+
+                                                                        <div class="menuItem-details">
+
+                                                                                <h4 class="menuItem-topic">
+                                                                                        Curso de Programación Básica
+                                                                                </h4>
+
+                                                                                <p class="menuItem-des">
+                                                                                    Si aún no sabes si la programación es lo tuyo.. No te preocupes! Aprende programación básica.
+                                                                                </p>
+
+                                                                        </div>
+
+                                                                        <div class="menuItem-cta flex">
+                                                                                <a class="button menuItem-btn" data-curso="basico"
+                                                                                        target="_blank" rel="noopener">Conoce más</a>
+                                                                        </div>
+
+                                                                </div>
+
+                                                        </div>
+
+                                                        <!-- Time Table -->
+                                                        <div class="time-table">
+
+                                                                <span class="time-topic">
+                                                                        Horarios de disponibilidad
+                                                                </span>
+
+                                                                <ul class="time-lists">
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Lunes</span>
+                                                                                <span class="open-time">08:00 - 20:00</span>
+                                                                        </li>
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Martes</span>
+                                                                                <span class="open-time">08:00 - 20:00</span>
+                                                                        </li>
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Miércoles</span>
+                                                                                <span class="open-time">08:00 - 20:00</span>
+                                                                        </li>
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Jueves</span>
+                                                                                <span class="open-time">08:00 - 20:00</span>
+                                                                        </li>
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Viernes</span>
+                                                                                <span class="open-time">08:00 - 20:00</span>
+                                                                        </li>
+
+                                                                        <li class="time-list flex">
+                                                                                <span class="open-day">Sabado</span>
+                                                                                <span class="open-time">08:00 - 13:00</span>
+                                                                        </li>
+
+                                                                </ul>
+
+                                                        </div>
+
+                                                </div>
+
+                                        </div>
+
+                                </section>
+
                         </div>
 
                 </section>
@@ -445,158 +594,6 @@
                                                 La educación es el arte de hacer visibles las cosas invisibles
                                         </blockquote>
                                         <cite class="nosotros-quote-author">— Jean-François Lyotard</cite>
-                                </div>
-
-                        </div>
-
-                </section>
-
-                <!-- Menu -->
-                <section class="section menu" id="menu">
-
-                        <div class="menu-container container">
-
-                                <div class="menu-text">
-
-                                        <h4 class="section-subtitle">
-                                                <i style=" color: white;">Nuestros cursos</i>
-                                        </h4>
-
-                                        <h2 class="section-title">
-                                                Los cursos más populares
-                                        </h2>
-
-                                        <p class="section-description">
-                                                Conoce los cursos que actualmente se encuentran disponibles y con
-                                                inscripciones abiertas.
-                                        </p>
-
-                                </div>
-
-                                <div class="menu-content">
-
-                                        <div class="menu-items">
-
-                                                <!-- Item -->
-                                                <div class="menu-item flex">
-
-                                                        <img src="images/copyrightfreepictures-javascript-736400_1920.png"
-                                                                alt="Coffee Menu" class="menu-img">
-
-                                                        <div class="menuItem-details">
-
-                                                                <h4 class="menuItem-topic">
-                                                                        Curso de JavaScript
-                                                                </h4>
-
-                                                                <p class="menuItem-des">
-                                                                        Aprende Javascript desde lo más básico y conviertete en experto.
-                                                                </p>
-
-                                                        </div>
-
-                                                        <div class="menuItem-price flex">
-                                                                <span class="discount-price">$18.99</span>
-                                                                <span class="real-price">$20.66</span>
-                                                        </div>
-
-                                                </div>
-
-                                                <!-- Item -->
-                                                <div class="menu-item flex">
-
-                                                        <img src="images/krzysztof-m-laptop-3173613_1920.png"
-                                                                alt="Coffee Menu" class="menu-img">
-
-                                                        <div class="menuItem-details">
-
-                                                                <h4 class="menuItem-topic">
-                                                                        Curso de C++
-                                                                </h4>
-
-                                                                <p class="menuItem-des">
-                                                                    Dominarás las bases de C++ y lógica de programación.
-                                                                </p>
-
-                                                        </div>
-
-                                                        <div class="menuItem-price flex">
-                                                                <span class="discount-price">$15.99</span>
-                                                                <span class="real-price">$18.66</span>
-                                                        </div>
-
-                                                </div>
-
-                                                <!-- Item -->
-                                                <div class="menu-item flex">
-
-                                                        <img src="images/krzysztof-m-laptop-3173613_1920.png"
-                                                                alt="Coffee Menu" class="menu-img">
-
-                                                        <div class="menuItem-details">
-
-                                                                <h4 class="menuItem-topic">
-                                                                        Curso de Programación Básica
-                                                                </h4>
-
-                                                                <p class="menuItem-des">
-                                                                    Si aún no sabes si la programación es lo tuyo.. No te preocupes! Aprende programación básica.
-                                                                </p>
-
-                                                        </div>
-
-                                                        <div class="menuItem-price flex">
-                                                                <span class="discount-price">$12.99</span>
-                                                                <span class="real-price">$16.66</span>
-                                                        </div>
-
-                                                </div>
-
-                                        </div>
-
-                                        <!-- Time Table -->
-                                        <div class="time-table">
-
-                                                <span class="time-topic">
-                                                        Horarios de disponibilidad
-                                                </span>
-
-                                                <ul class="time-lists">
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Lunes</span>
-                                                                <span class="open-time">08:00 - 20:00</span>
-                                                        </li>
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Martes</span>
-                                                                <span class="open-time">08:00 - 20:00</span>
-                                                        </li>
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Miércoles</span>
-                                                                <span class="open-time">08:00 - 20:00</span>
-                                                        </li>
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Jueves</span>
-                                                                <span class="open-time">08:00 - 20:00</span>
-                                                        </li>
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Viernes</span>
-                                                                <span class="open-time">08:00 - 20:00</span>
-                                                        </li>
-
-                                                        <li class="time-list flex">
-                                                                <span class="open-day">Sabado</span>
-                                                                <span class="open-time">08:00 - 13:00</span>
-                                                        </li>
-
-                                                </ul>
-
-                                        </div>
-
                                 </div>
 
                         </div>

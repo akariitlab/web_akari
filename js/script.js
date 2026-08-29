@@ -159,7 +159,10 @@ function switchTab(tabName) {
         t.classList.remove('active');
     });
     var panel = document.getElementById('tab-' + tabName);
-    if (panel) panel.classList.remove('biz-panel--hidden');
+    if (panel) {
+        panel.classList.remove('biz-panel--hidden');
+        revelarContenidoPanel(panel);
+    }
     var activeTab = document.querySelector('[data-tab="' + tabName + '"]');
     if (activeTab) activeTab.classList.add('active');
 }
@@ -176,3 +179,68 @@ function closeDemoModal(event) {
         toggleDemoModal();
     }
 }
+
+// ScrollReveal deja en opacity:0 el contenido de los paneles ocultos y nunca lo
+// revela, porque dentro de un display:none su geometría cacheada es 0. Al mostrar
+// un panel liberamos los elementos que ScrollReveal tenga bajo control.
+function revelarContenidoPanel(panel) {
+    panel.querySelectorAll('[data-sr-id]').forEach(function (el) {
+        el.style.visibility = 'visible';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+    });
+}
+
+// Cursos -> WhatsApp
+const WHATSAPP_NUMERO = '51963139952';
+
+const CURSOS_WA = {
+    javascript: {
+        nombre: 'Curso de JavaScript',
+        preguntas: [
+            '¿Cuál es el precio y las formas de pago?',
+            '¿Cuándo inicia el curso y cuánto dura?',
+            '¿Qué horarios hay disponibles?',
+            '¿Necesito conocimientos previos de programación?',
+            '¿Se ve desarrollo web moderno o frameworks como React?',
+            '¿El curso incluye certificado?'
+        ]
+    },
+    python: {
+        nombre: 'Curso de Python',
+        preguntas: [
+            '¿Cuál es el precio y las formas de pago?',
+            '¿Cuándo inicia el curso y cuánto dura?',
+            '¿Qué horarios hay disponibles?',
+            '¿Necesito conocimientos previos de programación?',
+            '¿Se ve análisis de datos y automatización?',
+            '¿El curso incluye certificado?'
+        ]
+    },
+    basico: {
+        nombre: 'Curso de Programación Básica',
+        preguntas: [
+            '¿Cuál es el precio y las formas de pago?',
+            '¿Cuándo inicia el curso y cuánto dura?',
+            '¿Qué horarios hay disponibles?',
+            '¿Es adecuado si nunca he programado?',
+            '¿Qué lenguaje se usa durante el curso?',
+            '¿El curso incluye certificado?'
+        ]
+    }
+};
+
+function construirEnlaceCurso(clave) {
+    const curso = CURSOS_WA[clave];
+    if (!curso) return null;
+
+    const mensaje = `Hola, vengo de la web de AKARI y me interesa el *${curso.nombre}*.\nMe gustaría saber:\n\n`
+        + curso.preguntas.map((p, i) => `${i + 1}. ${p}`).join('\n');
+
+    return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensaje)}`;
+}
+
+document.querySelectorAll('.menuItem-btn[data-curso]').forEach(btn => {
+    const enlace = construirEnlaceCurso(btn.dataset.curso);
+    if (enlace) btn.href = enlace;
+});
