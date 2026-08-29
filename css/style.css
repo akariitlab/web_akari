@@ -839,18 +839,41 @@ img {
   font-size: var(--small-font);
 }
 
-.menuItem-price {
-  flex-direction: column;
+/* CTA a WhatsApp (reemplaza a los precios) */
+.menuItem-cta {
   padding-left: 2rem;
   border-left: 2px solid rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
-.discount-price {
-  font-size: 1.8rem;
+.menuItem-btn {
+  padding: 1rem 2rem;
+  font-size: var(--small-font);
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.real-price {
-  text-decoration: line-through;
+/* Icono de curso: sustituye a .menu-img en tarjetas sin foto */
+.menu-icon {
+  font-size: 6rem;
+  line-height: 1;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  color: var(--section-bg);
+}
+
+/* La seccion de cursos vive dentro de #empresas, que ya es un .section con
+   padding 7rem 2rem: compensamos el doble padding y devolvemos el fondo
+   oscuro a sangre completa. */
+#tab-students .menu {
+  padding: 4rem 2rem;
+  margin: 0 -2rem;
 }
 
 .time-topic {
