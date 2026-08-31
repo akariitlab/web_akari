@@ -492,15 +492,36 @@
                                         <li>Atraer y retener el talento en todos los equipos</li>
                                         <li>Aumentar la productividad de los empleados</li>
                                 </ul>
-                                <form class="demo-form" onsubmit="return false;">
-                                        <input type="text" placeholder="Nombre" class="demo-input">
-                                        <input type="text" placeholder="Apellido" class="demo-input">
-                                        <input type="email" placeholder="Correo corporativo" class="demo-input">
-                                        <input type="tel" placeholder="Teléfono" class="demo-input">
-                                        <input type="text" placeholder="Tipo de organización" class="demo-input demo-input--full">
-                                        <input type="text" placeholder="País" class="demo-input demo-input--full">
+                                <form class="demo-form" id="demo-form" onsubmit="submitDemoForm(event)">
+                                        <input type="text" placeholder="Nombre" class="demo-input" id="demo-nombre" required>
+                                        <input type="text" placeholder="Apellido" class="demo-input" id="demo-apellido" required>
+                                        <select class="demo-input demo-input--full demo-select" id="demo-pais" required onchange="onPaisChange()">
+                                                <option value="" disabled selected>🌎 Selecciona tu país *</option>
+                                                <option value="PE" data-prefix="+51">🇵🇪 Perú (+51)</option>
+                                                <option value="MX" data-prefix="+52">🇲🇽 México (+52)</option>
+                                                <option value="CO" data-prefix="+57">🇨🇴 Colombia (+57)</option>
+                                                <option value="AR" data-prefix="+54">🇦🇷 Argentina (+54)</option>
+                                                <option value="CL" data-prefix="+56">🇨🇱 Chile (+56)</option>
+                                                <option value="EC" data-prefix="+593">🇪🇨 Ecuador (+593)</option>
+                                                <option value="BO" data-prefix="+591">🇧🇴 Bolivia (+591)</option>
+                                                <option value="PY" data-prefix="+595">🇵🇾 Paraguay (+595)</option>
+                                                <option value="UY" data-prefix="+598">🇺🇾 Uruguay (+598)</option>
+                                                <option value="VE" data-prefix="+58">🇻🇪 Venezuela (+58)</option>
+                                                <option value="BR" data-prefix="+55">🇧🇷 Brasil (+55)</option>
+                                                <option value="US" data-prefix="+1">🇺🇸 Estados Unidos (+1)</option>
+                                                <option value="ES" data-prefix="+34">🇪🇸 España (+34)</option>
+                                                <option value="OTHER" data-prefix="+">🌐 Otro</option>
+                                        </select>
+                                        <div class="demo-phone-wrapper">
+                                                <span class="demo-phone-prefix" id="demo-phone-prefix">+</span>
+                                                <input type="tel" placeholder="Número de teléfono *" class="demo-input demo-input--phone" id="demo-telefono"
+                                                        disabled required>
+                                        </div>
+                                        <input type="text" placeholder="Tipo de organización" class="demo-input demo-input--full" id="demo-organizacion">
+                                        <input type="email" placeholder="Correo corporativo *" class="demo-input demo-input--full" id="demo-correo" required>
                                         <button type="submit" class="button demo-submit">Enviar</button>
                                 </form>
+
                         </div>
                 </div>
 
