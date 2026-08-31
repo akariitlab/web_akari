@@ -244,3 +244,61 @@ document.querySelectorAll('.menuItem-btn[data-curso]').forEach(btn => {
     const enlace = construirEnlaceCurso(btn.dataset.curso);
     if (enlace) btn.href = enlace;
 });
+
+// ============================================
+// Demo Form — País desplegable + Prefijo Tel
+// ============================================
+
+function onPaisChange() {
+    const select   = document.getElementById('demo-pais');
+    const telInput = document.getElementById('demo-telefono');
+    const prefixEl = document.getElementById('demo-phone-prefix');
+
+    if (!select || !telInput || !prefixEl) return;
+
+    const selectedOption = select.options[select.selectedIndex];
+    const prefix = selectedOption.getAttribute('data-prefix') || '+';
+
+    // Actualizar prefijo visible
+    prefixEl.textContent = prefix;
+
+    // Habilitar campo de teléfono
+    telInput.disabled = false;
+    telInput.placeholder = 'Número de teléfono *';
+    telInput.focus();
+}
+
+function submitDemoForm(event) {
+    event.preventDefault();
+
+    const pais      = document.getElementById('demo-pais');
+    const telefono  = document.getElementById('demo-telefono');
+    const prefixEl  = document.getElementById('demo-phone-prefix');
+    const nombre    = document.getElementById('demo-nombre');
+    const apellido  = document.getElementById('demo-apellido');
+    const correo    = document.getElementById('demo-correo');
+    const org       = document.getElementById('demo-organizacion');
+
+    // Validar que se seleccionó país
+    if (!pais || !pais.value) {
+        pais.focus();
+        pais.style.borderColor = '#e53935';
+        setTimeout(() => { pais.style.borderColor = ''; }, 2000);
+        return;
+    }
+
+    const selectedOption = pais.options[pais.selectedIndex];
+    const prefix  = prefixEl ? prefixEl.textContent : '';
+    const paisNombre = selectedOption.text.replace(/[🌎🇵🇪🇲🇽🇨🇴🇦🇷🇨🇱🇪🇨🇧🇴🇵🇾🇺🇾🇻🇪🇧🇷🇺🇸🇪🇸🌐]/gu, '').trim();
+
+    const mensaje = encodeURIComponent(
+        `Hola AKARI, vengo de la web y quiero saber más:\n` +
+        `Nombre: ${nombre.value} ${apellido.value}\n` +
+        `País: ${paisNombre}\n` +
+        `Teléfono: ${prefix}${telefono.value}\n` +
+        `Organización: ${org.value || 'No indicada'}\n` +
+        `Correo: ${correo.value}`
+    );
+
+    window.open(`https://wa.me/51963139952?text=${mensaje}`, '_blank');
+}

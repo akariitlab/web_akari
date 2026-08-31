@@ -2178,3 +2178,95 @@ img {
     font-size: 1.3rem;
   }
 }
+
+/* ============================================
+   DEMO FORM — País desplegable + Prefijo Tel
+   ============================================ */
+
+/* Select de país */
+.demo-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24'%3E%3Cpath fill='%23888' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.2rem center;
+  background-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.demo-select option[value=""][disabled] {
+  color: #aaa;
+}
+
+/* Wrapper del teléfono con prefijo */
+.demo-phone-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ddd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: border-color var(--tran-0-3);
+  background: #fff;
+}
+
+.demo-phone-wrapper:focus-within {
+  border-color: var(--primary-color);
+}
+
+.demo-phone-prefix {
+  padding: 0.9rem 1rem 0.9rem 1.2rem;
+  background: #f4f6fb;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-right: 1.5px solid #ddd;
+  min-width: 5rem;
+  text-align: center;
+  transition: background var(--tran-0-3), color var(--tran-0-3);
+}
+
+.demo-phone-wrapper:has(input:not(:disabled)) .demo-phone-prefix {
+  background: #e8edf8;
+  color: var(--primary-color-hover);
+}
+
+.demo-input--phone {
+  border: none !important;
+  border-radius: 0 !important;
+  flex: 1;
+}
+
+.demo-input--phone:focus {
+  outline: none;
+  border-color: transparent !important;
+}
+
+/* Estado deshabilitado del teléfono */
+.demo-input:disabled,
+.demo-input--phone:disabled {
+  background: #f9f9f9;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.demo-phone-wrapper:has(input:disabled) {
+  border-color: #ddd;
+  background: #f9f9f9;
+}
+
+.demo-phone-wrapper:has(input:disabled) .demo-phone-prefix {
+  color: #bbb;
+}
+
+/* Animación de habilitación */
+@keyframes enableField {
+  from { background: #eef2ff; }
+  to   { background: #fff; }
+}
+
+.demo-input--phone:not(:disabled) {
+  animation: enableField 0.4s ease;
+}
